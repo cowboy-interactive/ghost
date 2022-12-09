@@ -49,21 +49,21 @@ const Cont = styled(motion.p)`
   flex-direction: row;
   cursor: pointer;
 
-  ${({xl}) => xl};
+  ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
-    ${({lg}) => lg};
+    ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
-    ${({md}) => md};
+    ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
-    ${({sm}) => sm};
+    ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    ${({xs}) => xs};
+    ${({ xs }) => xs};
   }
 `;

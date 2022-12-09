@@ -34,6 +34,7 @@ export const H2 = ({
 const Cont = styled(motion.h2)`
   display: flex;
   flex-direction: row;
+  margin: 0 0 20px 0;
   font-weight: ${text.h2.weight};
   font-size: ${text.h2.lg};
 

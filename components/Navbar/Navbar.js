@@ -52,13 +52,14 @@ export const Navbar = ({
               href={item.url}
               setShowMenu={setShowMenu}
               xl={"font-size: 16px; font-weight: 500; margin: 0 40px 0 0"}
+              sm={"display: none"}
             >
               {item.text}
             </Link>
           );
         })}
         <ThemeSwitch />
-        <Button xl={"margin: 0 0 0 40px;"}>Contact Us</Button>
+        <Button xl={"margin: 0 0 0 40px;"} sm={"display: none"}>Contact Us</Button>
       </Container>
     </Cont>
   );

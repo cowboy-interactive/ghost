@@ -60,7 +60,7 @@ const Cont = styled(motion.button)`
   width: 200px;
   height: 40px;
   border-radius: 25px;
-  transition: 0.2s ease;
+  transition: 0.1s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   border: 0px;

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { sizes } from "../../utils/variables";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-export const Section = ({
+export const Img = ({
   children,
   xl,
   lg,
@@ -13,6 +14,7 @@ export const Section = ({
   whileInView = {},
   viewport = {},
   transition = {},
+  src = "",
 }) => {
   return (
     <Cont
@@ -26,33 +28,30 @@ export const Section = ({
       viewport={viewport}
       transition={transition}
     >
-      {children}
+      <Image src={src} layout="fill" objectFit="contain" />
     </Cont>
   );
 };
 
-const Cont = styled(motion.section)`
+const Cont = styled(motion.div)`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: auto;
-  margin: 100px 0;
-
-  ${({xl}) => xl};
+  position: relative;
+  box-sizing: border-box;
+  ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
-    ${({lg}) => lg};
+    ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
-    ${({md}) => md};
+    ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
-    ${({sm}) => sm};
+    ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    ${({xs}) => xs};
+    ${({ xs }) => xs};
   }
 `;
