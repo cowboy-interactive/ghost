@@ -35,6 +35,7 @@ const Cont = styled(motion.h1)`
   display: flex;
   flex-direction: row;
   margin: 0 0 20px 0;
+  z-index: 2;
   font-weight: ${text.h1.weight};
   font-size: ${text.h1.xl};
 

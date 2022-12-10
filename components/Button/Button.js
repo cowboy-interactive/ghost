@@ -63,8 +63,9 @@ const Cont = styled(motion.button)`
   transition: 0.1s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  border: 0px;
-  font-weight: 500;
+  border: 2px solid ${(props) => props.color}};
+  font-weight: 600;
+  z-index: 2;
   background: ${(props) => props.backround}};
   color: ${(props) => props.color}};
 

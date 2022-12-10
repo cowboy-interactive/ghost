@@ -4,8 +4,8 @@ export const themes = {
     secondary: "#333",
     text: "#333",
     highlight: "#87593F",
-    button: "linear-gradient(108.94deg, #DCA66A 0%, #E27700 0.01%, #E29913 100%);",
-    buttonText: "#FFF",
+    button: "linear-gradient(92.11deg, #FF85A9 0%, #FFB7CC 100%);",
+    buttonText: "#333",
     footer: "#222",
   },
   dark: {
@@ -13,8 +13,8 @@ export const themes = {
     secondary: "#FFF",
     text: "#FFF",
     highlight: "#CD8258;=",
-    button: "linear-gradient(108.94deg, #DCA66A 0%, #E27700 0.01%, #E29913 100%);",
-    buttonText: "#FFF",
+    button: "linear-gradient(92.11deg, #FF85A9 0%, #FFB7CC 100%);",
+    buttonText: "#333",
     footer: "#222",
   },
 };
@@ -36,9 +36,9 @@ export const text = {
   },
   h2: {
     xl: "48px",
-    lg: "48px",
-    md: "48px",
-    sm: "48px",
+    lg: "36px",
+    md: "36px",
+    sm: "36px",
     weight: "700",
   },
   h3: {

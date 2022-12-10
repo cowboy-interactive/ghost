@@ -32,24 +32,24 @@ const Switch = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  border: 1px solid ${(props) => props.themes[props.theme].secondary};
+  border: 2px solid ${(props) => props.themes[props.theme].secondary};
 
-  ${({xl}) => xl};
+  ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
-    ${({lg}) => lg};
+    ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
-    ${({md}) => md};
+    ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
-    ${({sm}) => sm};
+    ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    ${({xs}) => xs};
+    ${({ xs }) => xs};
   }
 `;
 
@@ -62,6 +62,7 @@ const Toggle = styled.div`
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease;
+  font-weight: 600;
   transform: ${(props) =>
     props.theme == "default" ? "translate(-5px)" : "translate(25px)"};
   background: ${(props) => props.themes[props.theme].secondary};

@@ -49,6 +49,7 @@ const Cont = styled(motion.section)`
   }
 
   @media (max-width: ${sizes.sm}) {
+    margin: 60px 0;
     ${({sm}) => sm};
   }
 

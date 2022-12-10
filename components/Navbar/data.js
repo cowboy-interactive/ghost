@@ -7,12 +7,4 @@ export const links = [
     text: "About",
     url: "/",
   },
-  {
-    text: "Services",
-    url: "/",
-  },
-  {
-    text: "Work",
-    url: "/",
-  },
 ];

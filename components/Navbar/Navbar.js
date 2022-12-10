@@ -35,6 +35,7 @@ export const Navbar = ({
       viewport={viewport}
       transition={transition}
       background={themes[theme].primary}
+      color={themes[theme].text}
       boxShadow={showMenu ? "0" : "0px 4px 20px rgba(0, 0, 0, 0.1)"}
     >
       <Link
@@ -76,6 +77,7 @@ const Cont = styled(motion.div)`
   top: 0;
   z-index: 999;
   box-sizing: border-box;
+  border-bottom: 2px solid ${(props) => props.color}};
   background: ${(props) => props.background}};
   box-shadow: ${({ boxShadow }) => boxShadow};
 

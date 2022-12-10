@@ -34,6 +34,8 @@ export const Column = ({
 const Cont = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  position: relative;
+  width: 100%;
 
   ${({ xl }) => xl};
 

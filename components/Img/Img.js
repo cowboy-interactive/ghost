@@ -28,7 +28,7 @@ export const Img = ({
       viewport={viewport}
       transition={transition}
     >
-      <Image src={src} layout="fill" objectFit="contain" />
+      <Image src={src} fill className="image"/>
     </Cont>
   );
 };
@@ -37,6 +37,17 @@ const Cont = styled(motion.div)`
   display: flex;
   position: relative;
   box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  background: #333;
+  width: 100%;
+  overflow: hidden;
+
+  .image {
+    object-fit: contain;
+    position: relative !important;
+  }
+
   ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
