@@ -21,11 +21,11 @@ export default function Home() {
 
   return (
     <Column xl="padding-top: 100px;">
-      <Scene
+{/*       <Scene
         windowSize={windowSize}
         scrollTop={scrollTop}
         position={position}
-      />
+      /> */}
       <Section>
         <Column>
           <H1
@@ -113,6 +113,21 @@ export default function Home() {
             Motion.
           </Text>
         </Column>
+      </Section>
+
+      <Section xl="align-items: center;" xs="align-items: flex-start;">
+        <Column
+          xl="max-width: 350px;"
+          sm="align-items: center; text-align: center;"
+          xs="align-items: flex-start; text-align: left;"
+        >
+          <H2>High performance out of the box</H2>
+          <Text>
+            Set your breakpoints and use media queries to write vanilla CSS on
+            any component.
+          </Text>
+        </Column>
+        <Img src="/images/lighthouse-1.png" xl="max-width: 500px;" />
       </Section>
 
       <Section>
