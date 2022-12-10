@@ -7,6 +7,13 @@ import { Sun, Moon } from "react-feather";
 export default function ThemeSwitch({ xl, lg, md, sm, xs }) {
   const { theme, setTheme } = useTheme();
 
+  //Handle Enter Key on Tab Navigation
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleTheme(theme, setTheme);
+    }
+  };
+
   return (
     <Switch
       xl={xl}
@@ -17,6 +24,8 @@ export default function ThemeSwitch({ xl, lg, md, sm, xs }) {
       theme={theme}
       themes={themes}
       onClick={() => handleTheme(theme, setTheme)}
+      tabIndex="0"
+      onKeyDown={(e) => handleKeyDown(e)}
     >
       <Toggle theme={theme} themes={themes}>
         {theme == "dark" ? <Sun size={16} /> : <Moon size={16} />}

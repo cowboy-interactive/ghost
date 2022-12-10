@@ -78,8 +78,9 @@ const Cont = styled(motion.div)`
   z-index: 999;
   box-sizing: border-box;
   border-bottom: 2px solid ${(props) => props.color}};
-  background: ${(props) => props.background}};
   box-shadow: ${({ boxShadow }) => boxShadow};
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
 
   ${({ xl }) => xl};
 

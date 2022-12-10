@@ -26,6 +26,16 @@ export const Link = ({
     });
   };
 
+  //Handle Enter Key on Tab Navigation
+  const handleKeyDown = (e, href) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      router.push(href).then(() => {
+        setShowMenu(false);
+      });
+    }
+  };
+
   return (
     <Cont
       xl={xl}
@@ -38,6 +48,8 @@ export const Link = ({
       viewport={viewport}
       transition={transition}
       onClick={(e) => handleClick(e, href)}
+      tabIndex="0"
+      onKeyDown={(e) => handleKeyDown(e, href)}
     >
       {children}
     </Cont>

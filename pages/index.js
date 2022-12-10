@@ -149,7 +149,7 @@ export default function Home() {
             Familiar and easy to learn
           </H2>
           <Text xl="max-width: 300px;">
-            No need to learn complicated class names. Just plain SCSS.
+            No need to learn complicated class names. Just plain CSS.
           </Text>
         </Column>
       </Section>

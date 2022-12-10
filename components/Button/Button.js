@@ -15,7 +15,7 @@ export const Button = ({
   whileInView = {},
   viewport = {},
   transition = {},
-  href,
+  href = "/",
   target,
 }) => {
   const { theme } = useTheme();
@@ -28,6 +28,14 @@ export const Button = ({
       return;
     }
     if (href) {
+      router.push(href);
+    }
+  };
+
+  //Handle Enter Key on Tab Navigation
+  const handleKeyDown = (e, href) => {
+    if (e.key === "Enter" && href && target !== "_blank") {
+      e.preventDefault();
       router.push(href);
     }
   };
@@ -46,6 +54,7 @@ export const Button = ({
       backround={themes[theme].button}
       color={themes[theme].buttonText}
       onClick={(e) => handleClick(e, href)}
+      onKeyDown={(e) => handleKeyDown(e, href)}
       target="_blank"
     >
       {children}
