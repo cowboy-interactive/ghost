@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { sizes, text } from "../../utils/variables";
+import { sizes } from "../../utils/variables";
 import { motion } from "framer-motion";
 
-export const Text = ({
+export const Grid = ({
   children,
   xl,
   lg,
@@ -31,28 +31,27 @@ export const Text = ({
   );
 };
 
-const Cont = styled(motion.p)`
-  line-height: 1.65;
-  margin: 0 0 40px 0;
-  z-index: 2;
-  font-weight: ${text.p.weight};
-  font-size: ${text.p.lg};
+const Cont = styled(motion.div)`
+  display: grid;
+  width: 100%;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 2fr 2fr;
 
-  ${({xl}) => xl};
+  ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
-    ${({lg}) => lg};
+    ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
-    ${({md}) => md};
+    ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
-    ${({sm}) => sm};
+    ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    ${({xs}) => xs};
+    ${({ xs }) => xs};
   }
 `;

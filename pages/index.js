@@ -5,10 +5,12 @@ import { Card } from "../components/Card/Card";
 import { Column } from "../components/Container/Column";
 import { Container } from "../components/Container/Container";
 import { Section } from "../components/Container/Section";
+import { Grid } from "../components/Grid/Grid";
 import { Img } from "../components/Img/Img";
 import { Scene } from "../components/Scene";
 import { H1 } from "../components/Text/H1";
 import { H2 } from "../components/Text/H2";
+import { H3 } from "../components/Text/H3";
 import { Text } from "../components/Text/Text";
 import useScrollTop from "../hooks/useScrollTop";
 import useWindowSize from "../hooks/useWindowSize";
@@ -26,7 +28,7 @@ export default function Home() {
         position={position}
       />
       <Section
-        xl="margin: 200px 0 100px 0; padding: 0 10%; align-items: flex-start;"
+        xl="margin: 200px 0 100px 0; padding: 0 20%; align-items: flex-start;"
         md="padding: 0 5%;"
         sm="margin: 200px 0 60px 0;"
       >
@@ -46,7 +48,7 @@ export default function Home() {
             Easy to use, beautifully designed components and templates to
             jumpstart your next project
           </Text>
-          <Container>
+          <Container sm="flex-direction: column;">
             <Button
               href="https://github.com/cowboy-interactive/cowboy-template/blob/main/README.md"
               target="_blank"
@@ -57,6 +59,7 @@ export default function Home() {
               href="https://github.com/cowboy-interactive/cowboy-template/blob/main/README.md"
               target="_blank"
               xl="margin: 0 0 0 20px; background: white;"
+              sm="margin: 20px 0 0 0;"
             >
               Get the Template
             </Button>
@@ -94,8 +97,13 @@ export default function Home() {
         xl="padding: 0 20%; align-items: center;"
         md="padding: 0 5%;"
         sm="flex-direction: column;"
+        xs="align-items: flex-start;"
       >
-        <Column xl="max-width: 400px;">
+        <Column
+          xl="max-width: 400px;"
+          md="width: 100%; align-items: center; text-align: center;"
+          xs="align-items: flex-start; text-align: left;"
+        >
           <H2>Write responsive CSS from the top level</H2>
           <Text>
             Set your breakpoints and use media queries to write vanilla CSS on
@@ -109,9 +117,14 @@ export default function Home() {
         xl="padding: 0 20%; align-items: center;"
         md="padding: 0 5%;"
         sm="flex-direction: column-reverse;"
+        xs="align-items: flex-start;"
       >
         <Img src="/images/screen-2.png" xl="max-width: 500px;" />
-        <Column xl="max-width: 400px;">
+        <Column
+          xl="max-width: 400px;"
+          md="width: 100%; align-items: center; text-align: center;"
+          xs="align-items: flex-start; text-align: left;"
+        >
           <H2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -151,6 +164,32 @@ export default function Home() {
           <Text xl="max-width: 300px;">
             No need to learn complicated class names. Just plain CSS.
           </Text>
+          <Grid sm="grid-template-columns: 2fr 2fr;" xs="grid-template-columns: 2fr;">
+            <Card>
+              <H3>Documentation</H3>
+              <Text>See what you can do with our template here.</Text>
+            </Card>
+            <Card>
+              <H3>Image Optimization</H3>
+              <Text>Automatic Image Optimization with instant builds.</Text>
+            </Card>
+            <Card>
+              <H3>Image Optimization</H3>
+              <Text>Automatic Image Optimization with instant builds.</Text>
+            </Card>
+            <Card>
+              <H3>Image Optimization</H3>
+              <Text>Automatic Image Optimization with instant builds.</Text>
+            </Card>
+            <Card>
+              <H3>Image Optimization</H3>
+              <Text>Automatic Image Optimization with instant builds.</Text>
+            </Card>
+            <Card>
+              <H3>Image Optimization</H3>
+              <Text>Automatic Image Optimization with instant builds.</Text>
+            </Card>
+          </Grid>
         </Column>
       </Section>
     </Container>

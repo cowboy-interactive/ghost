@@ -42,10 +42,10 @@ export const text = {
     weight: "700",
   },
   h3: {
-    xl: "36px",
-    lg: "36px",
-    md: "36px",
-    sm: "36px",
+    xl: "24px",
+    lg: "24px",
+    md: "24px",
+    sm: "24px",
     weight: "700",
   },
   h4: {

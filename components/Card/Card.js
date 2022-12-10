@@ -14,10 +14,12 @@ export const Card = ({
   whileInView = {},
   viewport = {},
   transition = {},
+  className,
 }) => {
   const { theme } = useTheme();
   return (
     <Cont
+      className={className}
       xl={xl}
       lg={lg}
       md={md}
@@ -27,8 +29,8 @@ export const Card = ({
       whileInView={whileInView}
       viewport={viewport}
       transition={transition}
-      backround={themes[theme].button}
-      color={themes[theme].buttonText}
+      backround={themes[theme].primary}
+      color={themes[theme].secondary}
     >
       {children}
     </Cont>
@@ -37,15 +39,18 @@ export const Card = ({
 
 const Cont = styled(motion.button)`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 40px;
-  border-radius: 25px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  flex-direction: column;
+  padding: 40px;
+  width: 100%;
+  min-height: 200px;
+  border-radius: 15px;
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  border: 0px;
+  border: 2px solid ${(props) => props.color}};
   font-weight: 500;
   background: ${(props) => props.backround}};
   color: ${(props) => props.color}};
@@ -55,21 +60,21 @@ const Cont = styled(motion.button)`
     box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
   }
 
-  ${({xl}) => xl};
+  ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
-    ${({lg}) => lg};
+    ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
-    ${({md}) => md};
+    ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
-    ${({sm}) => sm};
+    ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    ${({xs}) => xs};
+    ${({ xs }) => xs};
   }
 `;
