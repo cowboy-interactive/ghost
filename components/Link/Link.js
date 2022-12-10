@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sizes } from "../../utils/variables";
+import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -19,6 +19,7 @@ export const Link = ({
 }) => {
   const router = useRouter();
 
+  //Handle Click Link
   const handleClick = (e, href) => {
     e.preventDefault();
     router.push(href).then(() => {
@@ -26,7 +27,7 @@ export const Link = ({
     });
   };
 
-  //Handle Enter Key on Tab Navigation
+  //Handle "Enter" Key on Tab Navigation
   const handleKeyDown = (e, href) => {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -58,7 +59,6 @@ export const Link = ({
 
 const Cont = styled(motion.p)`
   display: flex;
-  flex-direction: row;
   cursor: pointer;
 
   ${({ xl }) => xl};

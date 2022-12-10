@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { sizes, text } from "../../utils/variables";
 import { motion } from "framer-motion";
+import { sizes } from "utils/variables/sizes";
+import { font } from "utils/variables/font";
 
 export const H2 = ({
   children,
@@ -35,8 +36,8 @@ const Cont = styled(motion.h2)`
   display: flex;
   flex-direction: row;
   margin: 0 0 20px 0;
-  font-weight: ${text.h2.weight};
-  font-size: ${text.h2.lg};
+  font-weight: ${font.h2.weight};
+  font-size: ${font.h2.lg};
 
   ${({xl}) => xl};
 

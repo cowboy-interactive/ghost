@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { sizes, themes } from "../../utils/variables";
+import { sizes, themes } from "utils/variables";
 import { motion } from "framer-motion";
-import { useTheme } from "../../utils/provider";
+import { useTheme } from "utils/provider";
 
 export const Card = ({
   children,

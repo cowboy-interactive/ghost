@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sizes } from "../../utils/variables";
+import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 
 export const Section = ({
@@ -33,10 +33,9 @@ export const Section = ({
 
 const Cont = styled(motion.section)`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  width: auto;
   margin: 100px 0;
+  padding: 0 20%;
 
   ${({xl}) => xl};
 
@@ -45,10 +44,12 @@ const Cont = styled(motion.section)`
   }
 
   @media (max-width: ${sizes.md}) {
+    padding: 0 5%;
     ${({md}) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
+    flex-direction: column;
     margin: 60px 0;
     ${({sm}) => sm};
   }

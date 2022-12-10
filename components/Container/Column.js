@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sizes } from "../../utils/variables";
+import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 
 export const Column = ({
@@ -34,8 +34,6 @@ export const Column = ({
 const Cont = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  position: relative;
-  width: 100%;
 
   ${({ xl }) => xl};
 

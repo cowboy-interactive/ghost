@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { sizes, text } from "../../utils/variables";
 import { motion } from "framer-motion";
+import { sizes, text } from "utils/variables";
 
 export const H3 = ({
   children,

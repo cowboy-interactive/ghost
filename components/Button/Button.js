@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { sizes, themes } from "../../utils/variables";
+import { sizes, themes } from "utils/variables";
 import { motion } from "framer-motion";
-import { useTheme } from "../../utils/provider";
+import { useTheme } from "utils/provider";
 import { useRouter } from "next/router";
 
 export const Button = ({
@@ -21,6 +21,7 @@ export const Button = ({
   const { theme } = useTheme();
   const router = useRouter();
 
+  //Handle Click Button
   const handleClick = (e, href) => {
     e.preventDefault();
     if (target == "_blank") {
@@ -72,9 +73,8 @@ const Cont = styled(motion.button)`
   transition: 0.1s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  border: 2px solid ${(props) => props.color}};
   font-weight: 600;
-  z-index: 2;
+  border: 2px solid ${(props) => props.color}};
   background: ${(props) => props.backround}};
   color: ${(props) => props.color}};
 

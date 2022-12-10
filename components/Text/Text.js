@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { sizes, text } from "../../utils/variables";
 import { motion } from "framer-motion";
+import { sizes, text } from "utils/variables";
+import { font } from "utils/variables/font";
 
 export const Text = ({
   children,
@@ -32,27 +33,26 @@ export const Text = ({
 };
 
 const Cont = styled(motion.p)`
-  line-height: 1.65;
   margin: 0 0 40px 0;
-  z-index: 2;
-  font-weight: ${text.p.weight};
-  font-size: ${text.p.lg};
+  font-weight: ${font.p.xl.weight};
+  font-size: ${font.p.xl.size};
+  line-height: ${font.p.xl.height};
 
-  ${({xl}) => xl};
+  ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
-    ${({lg}) => lg};
+    ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
-    ${({md}) => md};
+    ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
-    ${({sm}) => sm};
+    ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    ${({xs}) => xs};
+    ${({ xs }) => xs};
   }
 `;

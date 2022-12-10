@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { sizes, text } from "../../utils/variables";
 import { motion } from "framer-motion";
+import { sizes } from "utils/variables/sizes";
+import { font } from "utils/variables/font";
 
 export const H1 = ({
   children,
@@ -36,27 +37,27 @@ const Cont = styled(motion.h1)`
   flex-direction: row;
   margin: 0 0 20px 0;
   z-index: 2;
-  font-weight: ${text.h1.weight};
-  font-size: ${text.h1.xl};
+  font-weight: ${font.h1.weight};
+  font-size: ${font.h1.xl};
 
-  ${({xl}) => xl};
+  ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
-    font-size: ${text.h1.lg};
-    ${({lg}) => lg};
+    font-size: ${font.h1.lg};
+    ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
-    font-size: ${text.h1.md};
-    ${({md}) => md};
+    font-size: ${font.h1.md};
+    ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
-    font-size: ${text.h1.sm};
-    ${({sm}) => sm};
+    font-size: ${font.h1.sm};
+    ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    ${({xs}) => xs};
+    ${({ xs }) => xs};
   }
 `;

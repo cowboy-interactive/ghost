@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import { themes } from "../utils/variables";
-import { useTheme } from "../utils/provider";
-import Ball from "../public/Ball";
-import Cube from "../public/Cube";
-import Pyramid from "../public/Pyramid";
+import { themes } from "utils/variables";
+import { useTheme } from "utils/provider";
+import Ball from "public/Ball";
+import Cube from "public/Cube";
+import Pyramid from "public/Pyramid";
 
 export const Scene = ({ scrollTop, windowSize }) => {
   const { theme } = useTheme();

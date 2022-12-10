@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sizes } from "../../utils/variables";
+import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

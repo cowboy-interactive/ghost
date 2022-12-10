@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { useTheme } from "../../utils/provider";
-import { handleTheme } from "../../utils/functions/handleTheme";
-import { sizes, themes } from "../../utils/variables";
 import { Sun, Moon } from "react-feather";
+import { useTheme } from "utils/provider";
+import { handleTheme } from "utils/functions/handleTheme";
+import { sizes, themes } from "utils/variables";
 
 export default function ThemeSwitch({ xl, lg, md, sm, xs }) {
   const { theme, setTheme } = useTheme();
