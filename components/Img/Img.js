@@ -15,6 +15,7 @@ export const Img = ({
   viewport = {},
   transition = {},
   src = "",
+  alt = "",
 }) => {
   return (
     <Cont
@@ -28,7 +29,7 @@ export const Img = ({
       viewport={viewport}
       transition={transition}
     >
-      <Image src={src} fill className="image"/>
+      <Image src={src} fill className="image" alt={alt} />
     </Cont>
   );
 };
