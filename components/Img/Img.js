@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export const Img = ({
-  children,
   xl,
   lg,
   md,

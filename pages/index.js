@@ -163,7 +163,10 @@ export default function Home() {
           <Text xl="max-width: 300px;">
             No need to learn complicated class names. Just plain CSS.
           </Text>
-          <Grid sm="grid-template-columns: 2fr 2fr;" xs="grid-template-columns: 2fr;">
+          <Grid
+            sm="grid-template-columns: 2fr 2fr;"
+            xs="grid-template-columns: 2fr;"
+          >
             <Card>
               <H3>Documentation</H3>
               <Text>See what you can do with our template here.</Text>
