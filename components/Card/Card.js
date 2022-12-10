@@ -46,12 +46,11 @@ const Cont = styled(motion.button)`
   padding: 40px;
   width: 100%;
   min-height: 200px;
-  border-radius: 15px;
+  border-radius: 25px;
+  cursor: pointer;
   transition: 0.2s ease;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
   border: 2px solid ${(props) => props.color}};
-  font-weight: 500;
   background: ${(props) => props.backround}};
   color: ${(props) => props.color}};
 
