@@ -21,11 +21,11 @@ export default function Home() {
 
   return (
     <Column xl="padding-top: 100px;">
-{/*       <Scene
+      <Scene
         windowSize={windowSize}
         scrollTop={scrollTop}
         position={position}
-      /> */}
+      />
       <Section>
         <Column>
           <H1
