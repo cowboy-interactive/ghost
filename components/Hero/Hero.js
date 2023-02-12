@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { sizes } from "utils/variables/sizes";
+import { font } from "utils/variables/font";
 
-export const Img = ({
+export const Hero = ({
+  children,
   xl,
   lg,
   md,
@@ -13,8 +14,6 @@ export const Img = ({
   whileInView = {},
   viewport = {},
   transition = {},
-  src = "",
-  alt = "",
 }) => {
   return (
     <Cont
@@ -28,34 +27,35 @@ export const Img = ({
       viewport={viewport}
       transition={transition}
     >
-      <Image src={src} fill className="image" alt={alt} />
+      ghost
+      ghost
+      ghost
     </Cont>
   );
 };
 
-const Cont = styled(motion.div)`
+const Cont = styled(motion.h1)`
   display: flex;
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  overflow: hidden;
-
-  .image {
-    object-fit: contain;
-    position: relative !important;
-  }
+  flex-direction: row;
+  margin: 0 0 20px 0;
+  z-index: 2;
+  font-weight: ${font.h1.weight};
+  font-size: ${font.h1.xl};
 
   ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {
+    font-size: ${font.h1.lg};
     ${({ lg }) => lg};
   }
 
   @media (max-width: ${sizes.md}) {
+    font-size: ${font.h1.md};
     ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
+    font-size: ${font.h1.sm};
     ${({ sm }) => sm};
   }
 

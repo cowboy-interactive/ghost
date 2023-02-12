@@ -44,13 +44,11 @@ const Cont = styled(motion.section)`
   }
 
   @media (max-width: ${sizes.md}) {
-    padding: 0 5%;
     ${({md}) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
     flex-direction: column;
-    margin: 60px 0;
     ${({sm}) => sm};
   }
 

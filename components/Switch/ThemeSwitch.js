@@ -41,7 +41,7 @@ const Switch = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  border: 2px solid ${(props) => props.themes[props.theme].secondary};
+  border: 1px solid ${(props) => props.themes[props.theme].secondary};
 
   ${({ xl }) => xl};
 

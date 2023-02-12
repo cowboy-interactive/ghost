@@ -1,0 +1,5 @@
+@keyframes breath-animation {
+    0% { top: 0px; opacity: 20%}
+    50% { top: 100px; opacity: 80%}
+    100% { top: 0px; opacity: 20%}
+}

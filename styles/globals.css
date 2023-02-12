@@ -1,5 +1,6 @@
 @import url(normalize.css);
 @import url("general-sans.css");
+@import url("animation.css");
 
 html,
 body {

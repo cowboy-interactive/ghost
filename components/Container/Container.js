@@ -33,6 +33,7 @@ export const Container = ({
 
 const Cont = styled(motion.div)`
   display: flex;
+  position: relative;
 
   ${({xl}) => xl};
 

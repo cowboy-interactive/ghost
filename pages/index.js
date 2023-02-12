@@ -12,8 +12,11 @@ import { H3 } from "components/Text/H3";
 import { Text } from "components/Text/Text";
 import useScrollTop from "hooks/useScrollTop";
 import useWindowSize from "hooks/useWindowSize";
-
+import { themes } from "utils/variables";
+import { useTheme } from "utils/provider";
 import dynamic from "next/dynamic";
+import { Hero } from "components/Hero/Hero";
+import { Input } from "components/Input/Input";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
@@ -21,159 +24,234 @@ export default function Home() {
   const windowSize = useWindowSize();
   const [position] = useState({ x: 0, y: 0 });
 
+  const { theme, setTheme } = useTheme();
+
   return (
-    <Column xl="padding-top: 100px;">
-      <Scene
-        windowSize={windowSize}
-        scrollTop={scrollTop}
-        position={position}
-      />
-      <Section>
-        <Column>
-          <H1
-            xl="max-width: 600px;"
-            lg="max-width: 450px;"
-            sm="max-width: 350px;"
-          >
-            Quickly Develop Your Next Project
-          </H1>
-          <Text xl="max-width: 400px;">
-            Easy to use, beautifully designed components and templates to
-            jumpstart your next project
-          </Text>
-          <Container sm="flex-direction: column;">
-            <Button
-              href="https://github.com/cowboy-interactive/cowboy-template/blob/main/README.md"
-              target="_blank"
-            >
-              Browse Components
-            </Button>
-            <Button
-              href="https://github.com/cowboy-interactive/cowboy-template/blob/main/README.md"
-              target="_blank"
-              xl="margin: 0 0 0 20px; background: white;"
-              sm="margin: 20px 0 0 0;"
-            >
-              Get the Template
-            </Button>
-          </Container>
-        </Column>
-      </Section>
-
-      <Section xl="justify-content: center;" sm="align-items: center;">
-        <Column
-          xl="align-items: center; text-align: center; width: 400px;"
-          xs="align-items: flex-start; text-align: left; width: 100%; "
-        >
-          <H2>A fully customizable Next JS template</H2>
-          <Text>
-            The only template you need. Featuring Next{"\u00A0"}JS, Styled
-            {"\u00A0"}Components and Framer{"\u00A0"}Motion.
-          </Text>
-        </Column>
-      </Section>
-
-      <Section xl="align-items: center;" xs="align-items: flex-start;">
-        <Column
-          xl="max-width: 400px;"
-          sm="align-items: center; text-align: center;"
-          xs="align-items: flex-start; text-align: left;"
-        >
-          <H2>Write responsive CSS from the top level</H2>
-          <Text>
-            Set your breakpoints and use media queries to write vanilla CSS on
-            any component.
-          </Text>
-        </Column>
-        <Img src="/images/screen-1.png" xl="max-width: 500px;" />
-      </Section>
-
+    <Container xl="overflow: hidden; flex-direction: column;">
+      {/* 
+      hero section
+      hero section 
+      hero section 
+      */}
       <Section
-        xl="align-items: center;"
-        sm="flex-direction: column-reverse;"
-        xs="align-items: flex-start;"
+        xl="position: relative; 
+            margin: 100px 20% 0 20%; 
+            padding: 0;"
+        md="margin: 100px 5% 0 5%;"
       >
-        <Img src="/images/screen-2.png" xl="max-width: 500px;" />
-        <Column
-          xl="max-width: 400px;"
-          md="width: 100%; align-items: center; text-align: center;"
-          xs="align-items: flex-start; text-align: left;"
+        <Container
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ ease: "easeOut", duration: 1 }}
+          xl={`font-size: 256px; 
+              font-weight: 700; 
+              position: absolute;
+              color: ${themes[theme].primary};
+              -webkit-text-stroke: 1px ${themes[theme].secondary};`}
+          xs="font-size: 30vw; top: 0%; left: 0px;"
         >
+          ghost
+        </Container>
+        <Container
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.25 }}
+          viewport={{ once: true }}
+          transition={{ ease: "easeOut", duration: 1, delay: 0.25 }}
+          xl={`font-size: 256px; 
+              font-weight: 700; 
+              position: absolute; 
+              top: 100px; 
+              left: 200px;
+              color: ${themes[theme].primary};
+              -webkit-text-stroke: 1px ${themes[theme].secondary};`}
+          xs="font-size: 30vw; top: 50%; left:25%;"
+        >
+          ghost
+        </Container>
+        <Container
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.125 }}
+          viewport={{ once: true }}
+          transition={{ ease: "easeOut", duration: 1, delay: 0.5 }}
+          xl={`font-size: 256px; 
+              font-weight: 700; 
+              position: absolute; 
+              top: 200px; left: 400px;
+              color: ${themes[theme].primary};
+              -webkit-text-stroke: 1px ${themes[theme].secondary};`}
+          xs="font-size: 30vw; top: 100%; left:50%;"
+        >
+          ghost
+        </Container>
+        <Container
+          xl={`transition: 0.5s ease;
+              animation-name: breath-animation;
+              animation-duration: 4s;
+              animation-iteration-count: infinite;
+          `}
+        >
+          <Img
+            src="/images/ghost-1.png"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 1, delay: 1.25 }}
+            xl="max-width: 500px; 
+                top: 200px;"
+            sm="position: absolute;"
+          />
+        </Container>
+        <Container
+          xl="flex-direction: column; 
+              align-items: flex-end; 
+              top: 480px;
+              z-index: 100;"
+          xs="top: 300px;"
+        >
+          <H3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 1, delay: 0.75 }}
+            xl="margin: 0 0 40px 0"
+          >
+            invisble pimple patches
+          </H3>
+          <Button
+            xl="box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 1, delay: 1 }}
+          >
+            Coming Soon
+          </Button>
+        </Container>
+      </Section>
+      {/* 
+      section 1
+      section 1 
+      section 1 
+      */}
+      <Section
+        xl="position: relative; 
+            margin: 700px 20% 0 20%; 
+            padding: 0;"
+        md="margin: 600px 10% 0 10%;"
+        sm="margin: 1100px 10% 0 10%; 
+            align-items: center;"
+        xs="margin: 1000px 10% 0 10%; 
+            align-items: flex-start;"
+      >
+        <Img
+          src="/images/ghost-package.png"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ ease: "easeOut", duration: 1 }}
+          xl="max-width: 500px; margin: 0 40px 0 0;"
+          md="width: 100%; margin: 0 0 40px 0;"
+        />
+        <Container xl="flex-direction: column;">
           <H2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ ease: "easeOut", duration: 2 }}
-          >
-            A simple, easy to use animation library
-          </H2>
-          <Text
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            Create elegant on-scroll animations, on any component, using Framer
-            Motion.
-          </Text>
-        </Column>
-      </Section>
-
-      <Section xl="align-items: center;" xs="align-items: flex-start;">
-        <Column
-          xl="max-width: 350px;"
-          sm="align-items: center; text-align: center;"
-          xs="align-items: flex-start; text-align: left;"
-        >
-          <H2>High performance out of the box</H2>
-          <Text>
-            Set your breakpoints and use media queries to write vanilla CSS on
-            any component.
-          </Text>
-        </Column>
-        <Img src="/images/lighthouse-1.png" xl="max-width: 500px;" />
-      </Section>
-
-      <Section>
-        <Column
-          xl="width: 100%; align-items: center; text-align: center;"
-          sm="align-items: flex-start; text-align: left;"
-        >
-          <H2 xl="max-width: 300px;">Familiar and easy to learn</H2>
-          <Text xl="max-width: 300px;">
-            No need to learn complicated class names. Just plain CSS.
-          </Text>
-          <Grid
-            sm="grid-template-columns: 2fr 2fr;"
-            xs="grid-template-columns: 2fr;"
+            invisble pimple patches
+          </H2>
+          <Text
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
           >
-            <Card>
-              <H3>Documentation</H3>
-              <Text>See what you can do with our template here.</Text>
-            </Card>
-            <Card>
-              <H3>Image Optimization</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-            <Card>
-              <H3>Theme Provider</H3>
-              <Text>
-                Easily implement dark mode and different themes for your site.
-              </Text>
-            </Card>
-            <Card>
-              <H3>Tutorials</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-            <Card>
-              <H3>Components</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-            <Card>
-              <H3>Templates</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-          </Grid>
-        </Column>
+            coming soon...
+          </Text>
+          <Text
+            xl="width: 350px"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            The Effective Care Hydrocolloid Patches provide effective and
+            long-lasting coverage with a clear, matte finish. Available in 2
+            sizes, they blend seamlessly with all skin tones and stay in place
+            all day. Vegan and cruelty-free
+          </Text>
+          <Button
+            xl="box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            Coming Soon
+          </Button>
+        </Container>
       </Section>
-    </Column>
+      {/* 
+      section 2
+      section 2 
+      section 2 
+      */}
+      <Section
+        xl="position: relative; 
+            margin: 400px 20%; 
+            padding: 0;"
+        md="margin: 300px 10% 300px 10%;"
+      >
+        <Container
+          xl="position: absolute;
+              width: 100%;
+              transition: 0.5s ease;
+              animation-name: breath-animation;
+              animation-duration: 4s;
+              animation-iteration-count: infinite;"
+        >
+          <Img src="/images/ghost-1.png" />
+        </Container>
+        <Container
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ ease: "easeOut", duration: 1 }}
+          xl="flex-direction: column; 
+              align-items: center; 
+              width: 100%;"
+          xs="align-items: 
+              flex-start;"
+        >
+          <H2
+            xl={`font-size: 128px;
+                font-family:"GeneralSans-bold";
+                color: ${themes[theme].primary};
+                -webkit-text-stroke: 1px ${themes[theme].secondary};`}
+            lg="text-align: center; 
+                line-height: 100%; 
+                margin: 0 0 40px 0;"
+            md="text-align: center;"
+            xs="text-align: left; 
+                font-size: 20vw; "
+          >
+            become a&nbsp;ghost
+          </H2>
+          <Text xl="margin: 0 0 60px 0">
+            be the first to hear about news and product launches
+          </Text>
+          <Input
+            xl="margin: 0 0 20px 0"
+            xs="width: 100%;"
+            placeholder="email"
+          />
+          <Button xl="width: 300px;" xs="width: 100%;">
+            Subscribe
+          </Button>
+        </Container>
+      </Section>
+    </Container>
   );
 }

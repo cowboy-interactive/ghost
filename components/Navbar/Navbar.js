@@ -41,12 +41,12 @@ export const Navbar = ({
       <Link
         href={"/"}
         setShowMenu={setShowMenu}
-        xl={"font-size: 20px; font-weight: 500;"}
+        xl={"font-size: 20px; font-weight: 700;"}
       >
-        Cowboy UI
+        ghost
       </Link>
       <Container xl={"align-items: center;"}>
-        {links.map((item, i) => {
+        {/* {links.map((item, i) => {
           return (
             <Link
               key={i}
@@ -58,11 +58,11 @@ export const Navbar = ({
               {item.text}
             </Link>
           );
-        })}
+        })} */}
         <ThemeSwitch />
-        <Button xl={"margin: 0 0 0 40px;"} sm={"display: none"}>
+        {/* <Button xl={"margin: 0 0 0 40px;"} sm={"display: none"}>
           Contact Us
-        </Button>
+        </Button> */}
       </Container>
     </Cont>
   );
@@ -81,8 +81,6 @@ const Cont = styled(motion.div)`
   box-sizing: border-box;
   backdrop-filter: blur( 20px );
   -webkit-backdrop-filter: blur( 20px );
-  border-bottom: 2px solid ${(props) => props.color}};
-  box-shadow: ${({ boxShadow }) => boxShadow};
 
   ${({ xl }) => xl};
 
