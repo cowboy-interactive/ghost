@@ -124,24 +124,25 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ ease: "easeOut", duration: 1, delay: 1 }}
+            href=""
           >
             Coming Soon
           </Button>
         </Container>
       </Section>
       {/* 
-      section 1
-      section 1 
-      section 1 
+      section 2
+      section 2 
+      section 2 
       */}
       <Section
         xl="position: relative; 
             margin: 700px 20% 0 20%; 
             padding: 0;"
-        md="margin: 600px 10% 0 10%;"
-        sm="margin: 1100px 10% 0 10%; 
+        md="margin: 600px 5% 0 5%;"
+        sm="margin: 1100px 5% 0 5%; 
             align-items: center;"
-        xs="margin: 1000px 10% 0 10%; 
+        xs="margin: 1000px 5% 0 5%; 
             align-items: flex-start;"
       >
         <Img
@@ -150,7 +151,7 @@ export default function Home() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false }}
           transition={{ ease: "easeOut", duration: 1 }}
-          xl="max-width: 500px; margin: 0 40px 0 0;"
+          xl="max-width: 500px; margin: 0 60px 0 0;"
           md="width: 100%; margin: 0 0 40px 0;"
         />
         <Container xl="flex-direction: column;">
@@ -188,21 +189,22 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ ease: "easeOut", duration: 1 }}
+            href=""
           >
             Coming Soon
           </Button>
         </Container>
       </Section>
       {/* 
-      section 2
-      section 2 
-      section 2 
+      section 3
+      section 3 
+      section 3 
       */}
       <Section
         xl="position: relative; 
             margin: 400px 20%; 
             padding: 0;"
-        md="margin: 300px 10% 300px 10%;"
+        md="margin: 300px 5% 300px 5%;"
       >
         <Container
           xl="position: absolute;
@@ -212,13 +214,15 @@ export default function Home() {
               animation-duration: 4s;
               animation-iteration-count: infinite;"
         >
-          <Img src="/images/ghost-1.png" />
+          <Img
+            src="/images/ghost-1.png"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          />
         </Container>
         <Container
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ ease: "easeOut", duration: 1 }}
           xl="flex-direction: column; 
               align-items: center; 
               width: 100%;"
@@ -226,28 +230,54 @@ export default function Home() {
               flex-start;"
         >
           <H2
+            src="/images/ghost-1.png"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
             xl={`font-size: 128px;
                 font-family:"GeneralSans-bold";
                 color: ${themes[theme].primary};
-                -webkit-text-stroke: 1px ${themes[theme].secondary};`}
-            lg="text-align: center; 
-                line-height: 100%; 
-                margin: 0 0 40px 0;"
+                -webkit-text-stroke: 1px ${themes[theme].secondary};
+                margin: 0 0 40px 0;
+                line-height: 100%;`}
+            lg="text-align: center;"
             md="text-align: center;"
             xs="text-align: left; 
                 font-size: 20vw; "
           >
-            become a&nbsp;ghost
+            become<br/>a&nbsp;ghost
           </H2>
-          <Text xl="margin: 0 0 60px 0">
-            be the first to hear about news and product launches
+          <Text
+            src="/images/ghost-1.png"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+            xl="margin: 0 0 60px 0"
+          >
+            Be the first to hear about news and product launches
           </Text>
           <Input
+            src="/images/ghost-1.png"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
             xl="margin: 0 0 20px 0"
             xs="width: 100%;"
             placeholder="email"
           />
-          <Button xl="width: 300px;" xs="width: 100%;">
+          <Button
+            src="/images/ghost-1.png"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+            xl="width: 300px;"
+            xs="width: 100%;"
+            href=""
+          >
             Subscribe
           </Button>
         </Container>
