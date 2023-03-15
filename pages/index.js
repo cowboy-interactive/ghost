@@ -17,6 +17,7 @@ import { useTheme } from "utils/provider";
 import dynamic from "next/dynamic";
 import { Hero } from "components/Hero/Hero";
 import { Input } from "components/Input/Input";
+import { H4 } from "components/Text/H4";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
@@ -116,7 +117,7 @@ export default function Home() {
             transition={{ ease: "easeOut", duration: 1, delay: 0.75 }}
             xl="margin: 0 0 40px 0"
           >
-            invisble pimple patches
+            Invisble Pimple Patches
           </H3>
           <Button
             xl="box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);"
@@ -137,7 +138,7 @@ export default function Home() {
       */}
       <Section
         xl="position: relative; 
-            margin: 700px 20% 0 20%; 
+            margin: 600px 20% 0 20%; 
             padding: 0;"
         md="margin: 600px 5% 0 5%;"
         sm="margin: 1100px 5% 0 5%; 
@@ -161,7 +162,7 @@ export default function Home() {
             viewport={{ once: false }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            invisble pimple patches
+            Invisble Pimple Patches
           </H2>
           <Text
             initial={{ opacity: 0 }}
@@ -172,16 +173,18 @@ export default function Home() {
             coming soon...
           </Text>
           <Text
-            xl="width: 350px"
+            xl="max-width: 500px"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ ease: "easeOut", duration: 1 }}
           >
-            The Effective Care Hydrocolloid Patches provide effective and
-            long-lasting coverage with a clear, matte finish. Available in 2
-            sizes, they blend seamlessly with all skin tones and stay in place
-            all day. Vegan and cruelty-free
+            The flexible material works by absorbing fluid from a wound while
+            keeping the skin around it moist, which is key for speeding up the
+            healing process. These patches have proven highly effective against
+            acne blemishes and pimples. They work by supporting the skins
+            natural ability to cure from within, while blocking harmful
+            impurities.
           </Text>
           <Button
             xl="box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);"
@@ -202,9 +205,52 @@ export default function Home() {
       */}
       <Section
         xl="position: relative; 
+        margin: 400px 20% 0 20%;; 
+        padding: 0;"
+        md="margin: 300px 10% 0 10%;"
+      >
+        <Container xl="flex-direction: column; width: 100%; align-items: center;">
+          <Img
+            src="/images/patch.gif"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+            xl="max-width: 500px; margin: 0 0 60px 0; border-radius: 50%;"
+          />
+          <H2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            Extremely Thin
+          </H2>
+          <Text
+            xl="max-width: 500px; text-align: center;"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ ease: "easeOut", duration: 1 }}
+          >
+            The thinnest, most durable, and most stable patches. Can be
+            formulated to treat a wide variety of cosmetics issues: acne patch,
+            pimple patch, brightening patch.
+          </Text>
+        </Container>
+      </Section>
+      {/* 
+      section 4
+      section 4 
+      section 4
+      */}
+      <Section
+        xl="position: relative; 
             margin: 400px 20%; 
-            padding: 0;"
-        md="margin: 300px 5% 300px 5%;"
+            padding: 0;
+            justify-content: center;
+            align-items: center;"
+        md="margin: 300px 5%; "
       >
         <Container
           xl="position: absolute;
@@ -225,38 +271,27 @@ export default function Home() {
         <Container
           xl="flex-direction: column; 
               align-items: center; 
-              width: 100%;"
-          xs="align-items: 
-              flex-start;"
+              width: 80%;"
         >
-          <H2
+          <H4
             src="/images/ghost-1.png"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ ease: "easeOut", duration: 1 }}
-            xl={`font-size: 128px;
-                font-family:"GeneralSans-bold";
-                color: ${themes[theme].primary};
-                -webkit-text-stroke: 1px ${themes[theme].secondary};
-                margin: 0 0 40px 0;
-                line-height: 100%;`}
-            lg="text-align: center;"
-            md="text-align: center;"
-            xs="text-align: left; 
-                font-size: 20vw; "
+            xs="text-align: center;"
           >
-            become<br/>a&nbsp;ghost
-          </H2>
+            Become a ghost!
+          </H4>
           <Text
             src="/images/ghost-1.png"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ ease: "easeOut", duration: 1 }}
-            xl="margin: 0 0 60px 0"
+            xl="margin: 0 0 40px 0; text-align: center;"
           >
-            Be the first to hear about news and product launches
+            Be the first to hear about news and product{'\u00A0'}launches.
           </Text>
           <Input
             src="/images/ghost-1.png"

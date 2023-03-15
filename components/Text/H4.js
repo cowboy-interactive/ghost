@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { sizes, text } from "utils/variables";
+import { sizes } from "utils/variables";
+import { font } from "utils/variables/font";
 
 export const H4 = ({
   children,
@@ -34,8 +35,15 @@ export const H4 = ({
 const Cont = styled(motion.h4)`
   display: flex;
   flex-direction: row;
-  font-weight: ${text.h4.weight};
-  font-size: ${text.h4.lg};
+  font-family: GeneralSans-Bold;
+  font-weight: ${font.h4.weight};
+  font-size: ${font.h4.lg};
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+  margin: 0 0 20px 0;
+  text-align: center;
+
+
 
   ${({xl}) => xl};
 
@@ -49,6 +57,7 @@ const Cont = styled(motion.h4)`
 
   @media (max-width: ${sizes.sm}) {
     ${({sm}) => sm};
+    font-size: ${font.h4.sm};
   }
 
   @media (max-width: ${sizes.xs}) {

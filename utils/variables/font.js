@@ -21,10 +21,10 @@ export const font = {
     weight: "700",
   },
   h4: {
-    xl: "24px",
-    lg: "24px",
+    xl: "96px",
+    lg: "96px",
     md: "24px",
-    sm: "24px",
+    sm: "64px",
     weight: "700",
   },
   p: {
