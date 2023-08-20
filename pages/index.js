@@ -42,14 +42,14 @@ export default function Home() {
       >
         <Container
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={{ opacity: 0.5 }}
           viewport={{ once: true }}
           transition={{ ease: "easeOut", duration: 1 }}
           xl={`font-size: 256px; 
               font-weight: 700; 
               position: absolute;
               color: ${themes[theme].primary};
-              -webkit-text-stroke: 1px ${themes[theme].secondary};`}
+              -webkit-text-stroke: 2px ${themes[theme].secondary};`}
           xs="font-size: 30vw; top: 0%; left: 0px;"
         >
           ghost
@@ -65,7 +65,7 @@ export default function Home() {
               top: 100px; 
               left: 200px;
               color: ${themes[theme].primary};
-              -webkit-text-stroke: 1px ${themes[theme].secondary};`}
+              -webkit-text-stroke: 2px ${themes[theme].secondary};`}
           xs="font-size: 30vw; top: 50%; left:25%;"
         >
           ghost
@@ -80,7 +80,7 @@ export default function Home() {
               position: absolute; 
               top: 200px; left: 400px;
               color: ${themes[theme].primary};
-              -webkit-text-stroke: 1px ${themes[theme].secondary};`}
+              -webkit-text-stroke: 2px ${themes[theme].secondary};`}
           xs="font-size: 30vw; top: 100%; left:50%;"
         >
           ghost
